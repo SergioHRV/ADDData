@@ -40,11 +40,11 @@ public struct PersistenceController {
     let container: NSPersistentContainer
     
     public init(inMemory: Bool = false) {
-        let bundle: Bundle = inMemory ? .module : .main
+        let bundle: Bundle = .module
         guard let mom = NSManagedObjectModel.mergedModel(from: [bundle]) else {
             fatalError("Failed to create mom")
         }
-        container = NSPersistentContainer(name: "ADDDemo", managedObjectModel: mom)
+        container = NSPersistentContainer(name: "ADDemo", managedObjectModel: mom)
         
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
