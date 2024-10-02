@@ -8,7 +8,7 @@
 import Foundation
 import ADDDomain
 
-final class DefaultLocalArticleRepository: BaseLocalRepository, LocalArticleRepository {
+public final class DefaultLocalArticleRepository: BaseLocalRepository, LocalArticleRepository {
     
     public func getArticles() async throws -> [Article] {
         let localArticles = try await persistence.getAllArticles()
