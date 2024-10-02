@@ -1,0 +1,15 @@
+{
+  "originHash" : "ee51f80b7cc013bf40a131e43702b04ca50c36df6c2bce6166ec9fbb87956ebd",
+  "pins" : [
+    {
+      "identity" : "adddomain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SergioHRV/ADDDomain.git",
+      "state" : {
+        "revision" : "9e186bb15273f5efbbd7e4455dbaeaf0e20824a8",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 3
+}
