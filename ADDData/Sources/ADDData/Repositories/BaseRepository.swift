@@ -7,9 +7,9 @@
 
 import Foundation
 
-class BaseRepository {
+public class BaseRepository {
     let client: APIClient
-    init(client: APIClient = Client()) {
+    public init(client: APIClient = Client()) {
         self.client = client
     }
 }

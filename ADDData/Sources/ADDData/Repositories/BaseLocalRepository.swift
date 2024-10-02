@@ -7,10 +7,10 @@
 
 import Foundation
 
-class BaseLocalRepository {
+public class BaseLocalRepository {
     let persistence: PersistenceController
 
-    init(persistenceController: PersistenceController = PersistenceController.shared) {
+    public init(persistenceController: PersistenceController = PersistenceController.shared) {
         persistence = persistenceController
     }
 }

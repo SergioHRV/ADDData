@@ -8,13 +8,13 @@
 import Foundation
 import ADDDomain
 
-protocol BatchInsertable {
+public protocol BatchInsertable {
     var dictionaryValue: [String: Any] { get }
 }
 
 extension Article: BatchInsertable {
     
-    var dictionaryValue: [String: Any] {
+    public var dictionaryValue: [String: Any] {
         [
             "id": id as Any,
             "title": title as Any,

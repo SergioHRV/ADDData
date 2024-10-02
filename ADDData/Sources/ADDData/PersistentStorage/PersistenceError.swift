@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum PersistenceError: Error {
+public enum PersistenceError: Error {
   case batchInsertError
 }

@@ -17,7 +17,7 @@ extension ArticleResponse {
         return formatter
     }
 
-    func toDomain() -> Article {
+    public func toDomain() -> Article {
         let date = dateFormatter.date(from: createdAt ?? "") ?? Date()
         let selectedTitle = title ?? otherTitle
         let article = Article(id: id,

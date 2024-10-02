@@ -8,9 +8,9 @@
 import Foundation
 import ADDDomain
 
-final class DefaultArticleRepository: BaseRepository, ArticleRepository {
+public final class DefaultArticleRepository: BaseRepository, ArticleRepository {
     
-    func getArticles() async throws -> [Article] {
+    public func getArticles() async throws -> [Article] {
         let endpoint = APIEndpoint(path: UrlConstant.articleList.url)
         let articlesResponse: ArticlesResponse = try await client.request(endpoint: endpoint)
         

@@ -8,9 +8,9 @@
 import Foundation
 import ADDDomain
 
-extension ArticleLocalEntity {
+public extension ArticleLocalEntity {
     
-    func toDomain() -> Article {
+    public func toDomain() -> Article {
         let article = Article(id: id,
                               title: title,
                               author: author,

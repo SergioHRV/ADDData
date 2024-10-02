@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HTTPStatusCode: Int, Error {
+public enum HTTPStatusCode: Int, Error {
     case ok = 200
     case found = 302
     case badRequest = 400

@@ -8,14 +8,14 @@
 import Foundation
 
 // MARK: Defines
-typealias Parameters = [String: Any]
-typealias Headers = [String: String]
-typealias Path = String
+public typealias Parameters = [String: Any]
+public typealias Headers = [String: String]
+public typealias Path = String
 
-enum Method {
+public enum Method {
     case get, post, put, patch, delete
     
-    var methodValue: String {
+    public var methodValue: String {
         switch self {
         case .get:
             return "GET"
@@ -32,7 +32,7 @@ enum Method {
 }
 
 // MARK: Endpoint
-final class APIEndpoint {
+public final class APIEndpoint {
     let method: Method
     let path: Path
     let parameters: Parameters?

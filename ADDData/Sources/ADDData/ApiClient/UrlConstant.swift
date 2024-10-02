@@ -12,7 +12,7 @@ private let baseURL: String = {
     return url
 }()
 
-enum UrlConstant {
+public enum UrlConstant {
     case articleList
     
     private var endPoint: String {
@@ -22,7 +22,7 @@ enum UrlConstant {
         }
     }
     
-    var url: String {
+    public var url: String {
         self.endPoint.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
     }
 }

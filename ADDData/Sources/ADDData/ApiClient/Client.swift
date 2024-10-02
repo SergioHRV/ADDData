@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol APIClient {
-    func request<T: Codable>(endpoint: APIEndpoint) async throws -> T 
+public protocol APIClient {
+    func request<T: Codable>(endpoint: APIEndpoint) async throws -> T
 }
 
-final class Client: APIClient {
+public final class Client: APIClient {
     
     private let session: URLSession
     
-    init() {
+    public init() {
         let configuration = URLSessionConfiguration.default
         self.session = URLSession(configuration: configuration)
     }
     
-    func request<T>(endpoint: APIEndpoint) async throws -> T where T : Decodable, T : Encodable {
+    public func request<T>(endpoint: APIEndpoint) async throws -> T where T : Decodable, T : Encodable {
         guard let url = URL(string:endpoint.path) else {
           throw HTTPStatusCode.notFound
         }

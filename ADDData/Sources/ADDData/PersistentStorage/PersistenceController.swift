@@ -8,11 +8,11 @@
 import CoreData
 import ADDDomain
 
-struct PersistenceController {
+public struct PersistenceController {
     
-    static let shared = PersistenceController()
+    public static let shared = PersistenceController()
     
-    static var preview: PersistenceController = {
+    public static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         
@@ -39,7 +39,7 @@ struct PersistenceController {
     
     let container: NSPersistentContainer
     
-    init(inMemory: Bool = false) {
+    public init(inMemory: Bool = false) {
         let bundle: Bundle = inMemory ? .module : .main
         guard let mom = NSManagedObjectModel.mergedModel(from: [bundle]) else {
             fatalError("Failed to create mom")
